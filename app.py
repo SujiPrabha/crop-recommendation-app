@@ -23,7 +23,7 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
-        received = request.get_json()
+        received = request.get_json(force=True)
 
         values = received["data"]
 
